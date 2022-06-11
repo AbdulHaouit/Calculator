@@ -1,0 +1,129 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="title" align="center">
+        Calculator
+    </div>
+    <form name="Calculator" class="calculator">
+        <table border="2" align="center" cellpadding="15" cellspacing="12" bgcolor="#c0c0c0">
+            <tr>
+                <td>
+                    <input type="text" name="Input" Size="30" id="display">
+                    <br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" name="one" style="font-size:30px" value=" 1 "
+                        OnClick="Calculator.Input.value += '1'">
+                    <input type="button" name="two" style="font-size:30px" value=" 2 "
+                        OnCLick="Calculator.Input.value += '2'">
+                    <input type="button" name="three" style="font-size:30px" value=" 3 "
+                        OnClick="Calculator.Input.value += '3'">
+                    <input type="button" name="add" class="btnTop" style="font-size:30px" value=" + "
+                        OnClick="Calculator.Input.value += ' + '">
+                    <br>
+                    <input type="button" name="four" style="font-size:30px" value=" 4 "
+                        OnClick="Calculator.Input.value += '4'">
+                    <input type="button" name="five" style="font-size:30px" value=" 5 "
+                        OnCLick="Calculator.Input.value += '5'">
+                    <input type="button" name="six" style="font-size:30px" value=" 6 "
+                        OnClick="Calculator.Input.value += '6'">
+                    <input type="button" name="minus" style="font-size:30px" value=" - "
+                        OnClick="Calculator.Input.value += ' - '">
+                    <br>
+                    <input type="button" name="seven" style="font-size:30px" value=" 7 "
+                        OnClick="Calculator.Input.value += '7'">
+                    <input type="button" name="eight" style="font-size:30px" value=" 8 "
+                        OnCLick="Calculator.Input.value += '8'">
+                    <input type="button" name="nine" style="font-size:30px" value=" 9 "
+                        OnClick="Calculator.Input.value += '9'">
+                    <input type="button" name="mul" style="font-size:30px" value=" * "
+                        OnClick="Calculator.Input.value += ' * '">
+                    <br>
+                    <input type="button" name="clear" style="font-size:30px" value=" C "
+                        OnClick="Calculator.Input.value = ''">
+                    <input type="button" name="zero" style="font-size:30px" value=" 0 "
+                        OnClick="Calculator.Input.value += '0'">
+                    <input type="button" name="DoIt" style="font-size:30px" value=" = "
+                        OnClick="Calculator.Input.value = eval(Calculator.Input.value)">          
+                    <input type="button" name="div" style="font-size:30px" value=" / "
+                        OnClick="Calculator.Input.value += ' / '">    
+                    <br>
+                </td>
+
+            </tr>
+        </table>
+    </form>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>A Simple Calculator With HTML, CSS & Javascript </title>
+	<meta name="description" content="Here's a demo of a simple calculator"/>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+
+<div class="container">
+	<div class="calc-container">
+
+		<h1>Calculator</h1>
+
+		<input id="box" value="" type="text" readonly placeholder="0"><br/>
+
+		<div class="btn-container">
+		<div class="row">
+				<button class="btn" onclick="shownum('1')"><strong>1</strong></button>
+				<button class="btn" onclick="shownum('2')"><strong>2</strong></button>
+				<button class="btn" onclick="shownum('3')"><strong>3</strong></button>
+				<button class="btn cbtn" onclick="delback()"><strong>D</strong></button>
+		</div>
+		<div class="row">
+				<button class="btn" onclick="shownum('4')"><strong>4</strong></button>
+				<button class="btn" onclick="shownum('5')"><strong>5</strong></button>
+				<button class="btn" onclick="shownum('6')"><strong>6</strong></button>
+				<button class="btn" onclick="shownum('+')"><strong>+</strong></button>
+		</div>
+		<div class="row">
+				<button class="btn" onclick="shownum('7')"><strong>7</strong></button>
+				<button class="btn" onclick="shownum('8')"><strong>8</strong></button>
+				<button class="btn" onclick="shownum('9')"><strong>9</strong></button>
+				<button class="btn" onclick="shownum('-')"><strong>-</strong></button>
+		</div>
+		<div class="row">
+				<button class="btn" onclick="shownum('.')"><strong>.</strong></button>
+				<button class="btn" onclick="shownum('0')"><strong>0</strong></button>
+                <button class="btn cbtn" onclick="clearme()"><strong>C</strong></button>
+				<button class="btn" onclick="shownum('*')"><strong>*</strong></button>
+				
+		</div>
+		<div class="row">
+				<button class="btn solvebtn" onclick="solve()"><strong>=</strong></button>
+				<button class="btn" onclick="shownum('/')"><strong>/</strong></button>
+		</div>	
+		
+		</div>
+
+
+	</div>
+</div>
+
+	<footer id="footer">Designed by <a href="https://oscarmini.com/" target="_blank" style="color: #ffbb4f">Oscarmini</a></footer>
+</body>
+</html>
